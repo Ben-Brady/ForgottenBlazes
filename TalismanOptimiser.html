@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="background-color:#54b398;">
+<head>
+    <title>(Currnetly unfinshed) Talisman Optimiser</title>
+    <link rel="icon" href="Images\Talisman.png">
+</head>
+
+<script>
+    fuction ,Verify(Verstatus);{
+        var Verstatus = True
+        if((SWD==True && BOW==True) || (!SWD==True && !BOW==True)){
+            var Verstatus = False
+            alert("You incorrectly selected your specified weapon")
+        }
+        if (Verstatus==True){
+            Calculate()
+        }
+    }
+
+var Framewidth = window.innerWidth;
+int ,Imagewidth = framewidth/2
+int ,Imageheight = framewidth/6.64285714286
+</script>
+
+<img src="Images\Optimiser.png" style="position: absolute;;bottom:0px;left:0px;z-index:10;" width="465" height="140" >
+<a href="splashes.html"><img src="Images\Splashes.png" style="position:absolute;bottom:0px;right:0px;z-index:0;" width="465" height="140" /></a>
+
+<h1>Talisman Optimser</h1>
+
+<form>
+<input type="checkbox" id="SWD" name="SWD" checked="True" Value="True">
+<label for="SWD">Sword or Bow </label>
+<input type="checkbox" id="BOW" name="BOW" Value="True">
+
+<br>
+<label for="DCC">Desired Crit Chance:</label>
+<input type="number" id="DCC" name="DCC" value="0" min="0" step="1">
+
+<br><br>
+<label for="Dmg">Damage:</label>
+<input type="number" id="DMG" name="DMG" value="0" min="0" step="1">
+
+<br>
+<label for="CC">Crit Chance:</label>
+<input type="number" id="CC" name="CC" value="0" min="0" max="150" step="1">
+
+<br>
+<label for="CD">Crit Damage:</label>
+<input type="number" id="CD" name="CD" value="0" min="0" step="1">
+
+<br>
+<label for="STR">Strength:</label>
+<input type="number" id="STR" name="STR" value="0" min="0>" step="1">
+
+<br>
+<label for="CT"><font color="#FBFBFB">Common Talismans:</font></label>
+<input type="number" id="CT" name="CT" value="0" min="0" max="19" step="1">
+
+<br>
+<label for="UT"><font color="#53F853">Uncommon Talismans:</font></label>
+<input type="number" id="UT" name="UT" value="0" min="0" max="23" step="1">
+
+<br>
+<label for="RT"><font color="#5353F8">Uncommon Talismans:</font></label>
+<input type="number" id="RT" name="RT" value="0" min="0" max="23" step="1">
+
+<br>
+<label for="ET"><font color="#9D009D">Rare Talismans:</font></label>
+<input type="number" id="ET" name="ET" value="0" min="0" max="12" step="1">
+
+<br>
+<label for="LT"><font color="#EC9D00">Legendary Talismans:</font></label>
+<input type="number" id="LT" name="LT" value="0" min="0" max="3" step="1"><br>
+
+<br>
+<button onclick="Verify()">Submit</button>
+</form>
+<script  src="Talisman Optimiser.js"></script>
+</html>
